@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Occupied:</b>
+  <%= @toilet.occupied %>
+</p>
+
+<p>
+  <b>Sender:</b>
+  <%= @toilet.sender %>
+</p>
+
+
+<%= link_to 'Edit', edit_toilet_path(@toilet) %> |
+<%= link_to 'Back', toilets_path %>

@@ -1,0 +1,25 @@
+<%= form_for(@toilet) do |f| %>
+  <% if @toilet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@toilet.errors.count, "error") %> prohibited this toilet from being saved:</h2>
+
+      <ul>
+      <% @toilet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :occupied %><br />
+    <%= f.check_box :occupied %>
+  </div>
+  <div class="field">
+    <%= f.label :sender %><br />
+    <%= f.number_field :sender %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
