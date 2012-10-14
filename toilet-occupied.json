@@ -1,4 +1,7 @@
 {
   "occupied": true,
-  "sender": 999
+  "comment": "ick kacke",
+  "latitude": "52.506844",
+  "longitude": "13.424732",
+  "sender": 1
 }
