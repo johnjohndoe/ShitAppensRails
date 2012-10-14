@@ -6,7 +6,10 @@ class ToiletsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @toilets }
+      format.json {
+		toilets_hash = Toilet.hash_for_toilets(@toilets)
+		render :json => toilets_hash.to_json
+	}
     end
   end
 
@@ -15,11 +18,16 @@ class ToiletsController < ApplicationController
   def show
     @toilet = Toilet.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @toilet }
+        respond_to do |format|
+            format.html # show.html.erb
+            format.json {
+                toilet_hash = Toilet.hash_for_toilet(@toilet)
+                render :json => toilet_hash.to_json
+            }
+        end
     end
-  end
+
+
 
   # GET /toilets/new
   # GET /toilets/new.json
