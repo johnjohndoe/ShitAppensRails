@@ -1,10 +1,11 @@
 class Toilet < ActiveRecord::Base
-  attr_accessible :occupied, :sender, :comment, :latitude, :longitude, :created
+  attr_accessible :toiletId, :occupied, :sender, :comment, :latitude, :longitude, :created
 
 
 	def self.hash_for_toilet(toilet)
 
 		toilet_hash = Hash.new
+		toilet_hash["toiletId"] = toilet.toiletId
 		toilet_hash["occupied"] = toilet.occupied
 		toilet_hash["sender"] = toilet.sender
 		toilet_hash["comment"] = toilet.comment

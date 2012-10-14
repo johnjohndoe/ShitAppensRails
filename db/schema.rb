@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121014091045) do
+ActiveRecord::Schema.define(:version => 20121014135426) do
 
   create_table "toilets", :force => true do |t|
     t.boolean  "occupied"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20121014091045) do
     t.string   "comment"
     t.decimal  "latitude",   :precision => 10, :scale => 6
     t.decimal  "longitude",  :precision => 10, :scale => 6
+    t.string   "toiletId"
   end
 
 end
