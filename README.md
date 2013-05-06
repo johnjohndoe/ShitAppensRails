@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/johnjohndoe/ShitAppensRails.png)](https://travis-ci.org/johnjohndoe/ShitAppensRails)
+
 ShitAppens Rails Server
 =======================
 
