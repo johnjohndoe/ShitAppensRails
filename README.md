@@ -16,14 +16,18 @@ The REST interface allows to retrieve a list of toilets or the information for a
 
 To simulate a POST request you can prepare a simple JSON file ...
 
-    {
-     "occupied": true,
-     "sender": 999
-    }
+```json
+{
+ "occupied": true,
+ "sender": 999
+}
+```
 
 ... and send it via the command line tool curl.
 
-    curl -X POST -H "Content-Type:application/json" -d @/full/path/to/the/JSON/file/toilet-occupied.json http://localhost:3000/toilets.json
+```bash
+curl -X POST -H "Content-Type:application/json" -d @/full/path/to/the/JSON/file/toilet-occupied.json http://localhost:3000/toilets.json
+```
 
 Idea
 ----
